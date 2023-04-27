@@ -1,5 +1,6 @@
-from rest_framework.routers import DefaultRouter
 from post.ApiPrueba.views import PostApiViewSet
-
-router_posts = DefaultRouter()
-router_posts.register(prefix='post', basename='post', viewset=PostApiViewSet)
+from django.urls import path
+    
+urlpatterns = [
+    path('api/', PostApiViewSet.as_view(), name='prueba')
+]

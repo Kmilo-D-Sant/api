@@ -15,9 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from post.ApiPrueba.routes import router_posts
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('ApiPrueba/', include(router_posts.urls))
+    path('', include('post.ApiPrueba.urls'))
 ]
